@@ -3,6 +3,9 @@ FRAMEWORKS = -framework Cocoa\
 	-framework IOKit\
 	-framework CoreVideo
 
+INC = -I inc\
+	-I inc/glad\
+	-I inc/KHR
 all:
-	clang++ main.cpp libGLEW.a libglfw3.a -I inc $(FRAMEWORKS) 
+	clang++ main.cpp glad.cpp libglfw3.a $(INC) $(FRAMEWORKS) 
 
